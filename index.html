@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodDonationPlatform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        .nav-links a {
+            padding-left: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links a:hover {
+            color: bisque;
+            text-decoration: underline;
+        }
+
+        .button button {
+            border: none;
+            border-radius: 5px;
+            margin-left: 20px;
+            background-color: white;
+            padding: 8px;
+        }
+
+        .navbar {
+            background-color: #730310;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .img img {
+            height: 400px;
+            width: 100%;
+        }
+
+        .services h3 {
+            color: #730310;
+        }
+
+        .services {
+            padding: 50px;
+            margin-top: 40px;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card-box {
+            flex: 1;
+            background: #f5f5f5;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .card-box:hover {
+            background: #730310;
+            color: white;
+        }
+
+        .service-content {
+            margin-top: 25px;
+        }
+
+        .service-info {
+            display: none;
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        #service1 {
+            display: block;
+        }
+
+        .whocandonate h3 {
+            color: #730310;
+        }
+
+        .whocandonate {
+            padding: 50px;
+            padding-top: 0px;
+        }
+
+        .img-donate img {
+            margin-top: -500px;
+            width: 500px;
+            height: 320px;
+            margin-left: 650px;
+        }
+
+        button {
+            border-color: #730310;
+            color: #730310;
+            border: 2px solid;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        h3 {
+            color: #730310;
+        }
+
+        .processtodonate {
+            padding: 50px;
+            padding-top: 0px;
+        }
+        .total-data{
+            padding: 50px;
+            padding-top: 0px;
+        }
+    </style>
+    <script>
+        function showService(num) {
+            let all = document.querySelectorAll(".service-info");
+            all.forEach(div => div.style.display = "none");
+
+            document.getElementById("service" + num).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="text-decoration-none text-white fs-4 p-2">SAVE A LIFE</h3>
+        <div class="nav-links">
+            <a href="">Home</a>
+            <a href="">About Donation</a>
+            <a href="">Want to Donate</a>
+            <a href="">Need Blood</a>
+        </div>
+        <div class="button p-3">
+            <a href=""><button id="reg-btn">Register</button></a>
+            <a href="loginpage.html"><button id="log-btn">Log in</button></a>
+        </div>
+    </nav>
+    <div class="img">
+        <img src="https://prod-driefcase-wp.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/12/27144019/blood-donation-2-.png"
+            alt="">
+    </div>
+    <div class="services">
+        <h3><b>Our Services</b></h3>
+        <div class="service-cards">
+            <div class="card-box" onclick="showService(1)">Blood Availability</div>
+            <div class="card-box" onclick="showService(2)">Blood Center</div>
+            <div class="card-box" onclick="showService(3)">Donation Camps</div>
+            <div class="card-box" onclick="showService(4)">Donor Login</div>
+            <div class="card-box" onclick="showService(5)">Register Camp</div>
+        </div>
+
+        <div class="service-content">
+            <div id="service1" class="service-info">
+                <p>The Blood Availability Search lets users quickly check
+                    real-time blood availability across registered blood center. By selecting State, District,
+                    Blood Group, Component and Location, users can easily find the required units.
+                    This tool supports patients, donors,and hospitals in making informed decisions
+                    during emergencies or planned treatments.</p>
+                <button>Check Availability</button>
+            </div>
+            <div id="service2" class="service-info">
+                <p>The Blood Center Directory provides an easy way
+                    to find contact and service details of registered blood centers across the country.
+                    Users can search by State, District, or Blood Bank Name to access location,
+                    contact numbers, ensuring quick and reliable connections for donations or
+                    Blood unit confirmation.</p>
+                <button>Book center directory</button>
+            </div>
+            <div id="service3" class="service-info">
+                <p>The Blood Donation Camps section lists
+                    upcoming blood donation events, enabling donors to plan their
+                    participation in advance. By filtering by State, District, and Date,
+                    users can find nearby camps and contribute to life-saving efforts.
+                    This helps both blood centre and communities maintain steady blood supplies.</p>
+                <button>Blod donation Camps</button>
+            </div>
+            <div id="service4" class="service-info">
+                <p>The Donor Login portal allows registered donors
+                    to securely access their profiles, view donation history,
+                    update personal details, and receive notifications about nearby camps.
+                    This personalized space makes it easier for donors to stay engaged and informed.</p>
+                <button>Donor Login</button>
+            </div>
+            <div id="service5" class="service-info">
+                <p>The Register Voluntary Blood Camps feature lets
+                    organizations, institutions, and groups schedule and register their
+                    planned blood donation drives online. By providing camp details such as location,
+                    date, and coordinator contact information, organizers can ensure visibility
+                    to potential donors and support from local blood centers.</p>
+                <button>Register camps</button>
+            </div>
+        </div>
+    </div>
+    <div class="whocandonate" style="width: 600px;">
+        <h3><b>Who can donate</b></h3>
+        <p>Blood donation is a simple yet powerful act that can save countless lives,
+            and most healthy individuals are eligible to become donors. Generally,
+            anyone between the ages of 18 and 65 years, weighing at least 50 kilograms,
+            and in good overall health can donate blood. Donors should have normal
+            hemoglobin levels and must not be suffering from any active infections,
+            fever, or serious medical conditions at the time of donation.
+            People with well-controlled blood pressure and stable chronic conditions
+            may also be eligible, depending on medical evaluation.
+            Individuals who have recently undergone major surgery, received blood transfusions,
+            or taken certain medications may need to wait for a specific period before donating.
+            Pregnant women and those who have recently given birth are usually
+            advised to postpone blood donation for their safety.
+        </p>
+        <button>Check your Eligiblity</button>
+        <div class="img-donate">
+            <img src="https://png.pngtree.com/background/20250310/original/pngtree-blood-donation-white-background-of-a-blood-donor-with-a-bandage-picture-image_13571595.jpg"
+                alt="">
+        </div>
+    </div>
+    <div class="processtodonate">
+        <h3><b>Process Of Donation</b></h3>
+        <p>Blood donation is a voluntary and noble act that helps save lives and
+            supports patients in need of blood due to accidents, surgeries, or medical conditions.
+            It is a safe procedure carried out under the supervision of trained
+            medical professionals using sterile equipment. Donating blood not only benefits
+            recipients but also promotes a sense of social responsibility and community care.
+            The process is simple, quick, and can make a significant difference in someones life.
+        </p>
+        <p><b>Blood Donation Process (Simple Steps): </b></p>
+        <p>1. Registration</p>
+        <p>2. Health questionnaire</p>
+        <p>3. Hemoglobin, BP, weight check</p>
+        <p>4. Doctor/nurse approval</p>
+        <p>5. Blood collection (10–15 minutes)</p>
+        <p>6. Rest and refreshments</p>
+    </div>
+</body>
+</html>
