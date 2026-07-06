@@ -30,13 +30,13 @@
 
         .navbar {
             background: #8B0000;
-            padding: 15px 60px;
+            padding: 10px 50px;
         }
 
         .navbar-brand {
             color: white;
             font-weight: 700;
-            font-size: 1.7rem;
+            font-size: xx-large;
         }
 
         .navbar-brand:hover {
@@ -45,6 +45,7 @@
 
         .nav-link {
             color: white !important;
+            font-size: larger;
             margin-left: 20px;
             font-weight: 500;
         }
@@ -206,10 +207,10 @@
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container-fluid">
 
             <a class="navbar-brand" href="#">
-                ❤️ LifeFlow
+                Blood Donation
             </a>
 
             <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -353,16 +354,14 @@
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <script>
+        let regbtm = document.querySelector('.btn-custom');
 
-        document.addEventListener("DOMContentLoaded", () => {
+        regbtm.addEventListener('click',function(){
+                window.location.href = "loginpage.html";
+        })
 
-            const registerBtn = document.getElementById("reg-btn");
-            registerBtn.addEventListener("click", () => {
-                window.location.href = "register.html";
-            });
 
-        });
     </script>
 
 </body>
